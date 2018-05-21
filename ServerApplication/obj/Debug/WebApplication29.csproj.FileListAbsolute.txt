@@ -1,0 +1,92 @@
+c:\users\30190292\documents\visual studio 2017\Projects\WebApplication29\WebApplication29\bin\roslyn\csc.exe
+c:\users\30190292\documents\visual studio 2017\Projects\WebApplication29\WebApplication29\bin\roslyn\csc.exe.config
+c:\users\30190292\documents\visual studio 2017\Projects\WebApplication29\WebApplication29\bin\roslyn\csc.rsp
+c:\users\30190292\documents\visual studio 2017\Projects\WebApplication29\WebApplication29\bin\roslyn\csi.exe
+c:\users\30190292\documents\visual studio 2017\Projects\WebApplication29\WebApplication29\bin\roslyn\csi.rsp
+c:\users\30190292\documents\visual studio 2017\Projects\WebApplication29\WebApplication29\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\users\30190292\documents\visual studio 2017\Projects\WebApplication29\WebApplication29\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\30190292\documents\visual studio 2017\Projects\WebApplication29\WebApplication29\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+c:\users\30190292\documents\visual studio 2017\Projects\WebApplication29\WebApplication29\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\30190292\documents\visual studio 2017\Projects\WebApplication29\WebApplication29\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+c:\users\30190292\documents\visual studio 2017\Projects\WebApplication29\WebApplication29\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\30190292\documents\visual studio 2017\Projects\WebApplication29\WebApplication29\bin\roslyn\Microsoft.CSharp.Core.targets
+c:\users\30190292\documents\visual studio 2017\Projects\WebApplication29\WebApplication29\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+c:\users\30190292\documents\visual studio 2017\Projects\WebApplication29\WebApplication29\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+c:\users\30190292\documents\visual studio 2017\Projects\WebApplication29\WebApplication29\bin\roslyn\Microsoft.VisualBasic.Core.targets
+c:\users\30190292\documents\visual studio 2017\Projects\WebApplication29\WebApplication29\bin\roslyn\System.AppContext.dll
+c:\users\30190292\documents\visual studio 2017\Projects\WebApplication29\WebApplication29\bin\roslyn\System.Collections.Immutable.dll
+c:\users\30190292\documents\visual studio 2017\Projects\WebApplication29\WebApplication29\bin\roslyn\System.Diagnostics.StackTrace.dll
+c:\users\30190292\documents\visual studio 2017\Projects\WebApplication29\WebApplication29\bin\roslyn\System.IO.FileSystem.dll
+c:\users\30190292\documents\visual studio 2017\Projects\WebApplication29\WebApplication29\bin\roslyn\System.IO.FileSystem.Primitives.dll
+c:\users\30190292\documents\visual studio 2017\Projects\WebApplication29\WebApplication29\bin\roslyn\System.Reflection.Metadata.dll
+c:\users\30190292\documents\visual studio 2017\Projects\WebApplication29\WebApplication29\bin\roslyn\vbc.exe
+c:\users\30190292\documents\visual studio 2017\Projects\WebApplication29\WebApplication29\bin\roslyn\vbc.exe.config
+c:\users\30190292\documents\visual studio 2017\Projects\WebApplication29\WebApplication29\bin\roslyn\vbc.rsp
+c:\users\30190292\documents\visual studio 2017\Projects\WebApplication29\WebApplication29\bin\roslyn\VBCSCompiler.exe
+c:\users\30190292\documents\visual studio 2017\Projects\WebApplication29\WebApplication29\bin\roslyn\VBCSCompiler.exe.config
+c:\users\30190292\documents\visual studio 2017\Projects\WebApplication29\WebApplication29\bin\WebApplication29.dll.config
+c:\users\30190292\documents\visual studio 2017\Projects\WebApplication29\WebApplication29\bin\WebApplication29.dll
+c:\users\30190292\documents\visual studio 2017\Projects\WebApplication29\WebApplication29\bin\WebApplication29.pdb
+c:\users\30190292\documents\visual studio 2017\Projects\WebApplication29\WebApplication29\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+c:\users\30190292\documents\visual studio 2017\Projects\WebApplication29\WebApplication29\bin\Newtonsoft.Json.dll
+c:\users\30190292\documents\visual studio 2017\Projects\WebApplication29\WebApplication29\bin\System.Net.Http.Formatting.dll
+c:\users\30190292\documents\visual studio 2017\Projects\WebApplication29\WebApplication29\bin\System.Web.Http.dll
+c:\users\30190292\documents\visual studio 2017\Projects\WebApplication29\WebApplication29\bin\System.Web.Http.WebHost.dll
+c:\users\30190292\documents\visual studio 2017\Projects\WebApplication29\WebApplication29\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+c:\users\30190292\documents\visual studio 2017\Projects\WebApplication29\WebApplication29\bin\Newtonsoft.Json.xml
+c:\users\30190292\documents\visual studio 2017\Projects\WebApplication29\WebApplication29\bin\System.Net.Http.Formatting.xml
+c:\users\30190292\documents\visual studio 2017\Projects\WebApplication29\WebApplication29\bin\System.Web.Http.xml
+c:\users\30190292\documents\visual studio 2017\Projects\WebApplication29\WebApplication29\bin\System.Web.Http.WebHost.xml
+c:\users\30190292\documents\visual studio 2017\Projects\WebApplication29\WebApplication29\obj\Debug\WebApplication29.csprojResolveAssemblyReference.cache
+c:\users\30190292\documents\visual studio 2017\Projects\WebApplication29\WebApplication29\obj\Debug\WebApplication29.dll
+c:\users\30190292\documents\visual studio 2017\Projects\WebApplication29\WebApplication29\obj\Debug\WebApplication29.pdb
+c:\users\30190292\documents\visual studio 2017\Projects\WebApplication29\WebApplication29\bin\Microsoft.Diagnostics.Tracing.EventSource.dll
+c:\users\30190292\documents\visual studio 2017\Projects\WebApplication29\WebApplication29\bin\RabbitMQ.Client.dll
+c:\users\30190292\documents\visual studio 2017\Projects\WebApplication29\WebApplication29\bin\Microsoft.Diagnostics.Tracing.EventSource.xml
+c:\users\30190292\documents\visual studio 2017\Projects\WebApplication29\WebApplication29\bin\RabbitMQ.Client.xml
+C:\MyDrive\Petro\WebApplication29\WebApplication29\bin\roslyn\csc.exe
+C:\MyDrive\Petro\WebApplication29\WebApplication29\bin\roslyn\csc.exe.config
+C:\MyDrive\Petro\WebApplication29\WebApplication29\bin\roslyn\csc.rsp
+C:\MyDrive\Petro\WebApplication29\WebApplication29\bin\roslyn\csi.exe
+C:\MyDrive\Petro\WebApplication29\WebApplication29\bin\roslyn\csi.rsp
+C:\MyDrive\Petro\WebApplication29\WebApplication29\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\MyDrive\Petro\WebApplication29\WebApplication29\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\MyDrive\Petro\WebApplication29\WebApplication29\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\MyDrive\Petro\WebApplication29\WebApplication29\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\MyDrive\Petro\WebApplication29\WebApplication29\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\MyDrive\Petro\WebApplication29\WebApplication29\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\MyDrive\Petro\WebApplication29\WebApplication29\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\MyDrive\Petro\WebApplication29\WebApplication29\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\MyDrive\Petro\WebApplication29\WebApplication29\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\MyDrive\Petro\WebApplication29\WebApplication29\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\MyDrive\Petro\WebApplication29\WebApplication29\bin\roslyn\System.AppContext.dll
+C:\MyDrive\Petro\WebApplication29\WebApplication29\bin\roslyn\System.Collections.Immutable.dll
+C:\MyDrive\Petro\WebApplication29\WebApplication29\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\MyDrive\Petro\WebApplication29\WebApplication29\bin\roslyn\System.IO.FileSystem.dll
+C:\MyDrive\Petro\WebApplication29\WebApplication29\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\MyDrive\Petro\WebApplication29\WebApplication29\bin\roslyn\System.Reflection.Metadata.dll
+C:\MyDrive\Petro\WebApplication29\WebApplication29\bin\roslyn\vbc.exe
+C:\MyDrive\Petro\WebApplication29\WebApplication29\bin\roslyn\vbc.exe.config
+C:\MyDrive\Petro\WebApplication29\WebApplication29\bin\roslyn\vbc.rsp
+C:\MyDrive\Petro\WebApplication29\WebApplication29\bin\roslyn\VBCSCompiler.exe
+C:\MyDrive\Petro\WebApplication29\WebApplication29\bin\roslyn\VBCSCompiler.exe.config
+C:\MyDrive\Petro\WebApplication29\WebApplication29\bin\WebApplication29.dll.config
+C:\MyDrive\Petro\WebApplication29\WebApplication29\bin\WebApplication29.dll
+C:\MyDrive\Petro\WebApplication29\WebApplication29\bin\WebApplication29.pdb
+C:\MyDrive\Petro\WebApplication29\WebApplication29\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\MyDrive\Petro\WebApplication29\WebApplication29\bin\Microsoft.Diagnostics.Tracing.EventSource.dll
+C:\MyDrive\Petro\WebApplication29\WebApplication29\bin\Newtonsoft.Json.dll
+C:\MyDrive\Petro\WebApplication29\WebApplication29\bin\RabbitMQ.Client.dll
+C:\MyDrive\Petro\WebApplication29\WebApplication29\bin\System.Net.Http.Formatting.dll
+C:\MyDrive\Petro\WebApplication29\WebApplication29\bin\System.Web.Http.dll
+C:\MyDrive\Petro\WebApplication29\WebApplication29\bin\System.Web.Http.WebHost.dll
+C:\MyDrive\Petro\WebApplication29\WebApplication29\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\MyDrive\Petro\WebApplication29\WebApplication29\bin\Microsoft.Diagnostics.Tracing.EventSource.xml
+C:\MyDrive\Petro\WebApplication29\WebApplication29\bin\RabbitMQ.Client.xml
+C:\MyDrive\Petro\WebApplication29\WebApplication29\bin\Newtonsoft.Json.xml
+C:\MyDrive\Petro\WebApplication29\WebApplication29\bin\System.Net.Http.Formatting.xml
+C:\MyDrive\Petro\WebApplication29\WebApplication29\bin\System.Web.Http.xml
+C:\MyDrive\Petro\WebApplication29\WebApplication29\bin\System.Web.Http.WebHost.xml
+C:\MyDrive\Petro\WebApplication29\WebApplication29\obj\Debug\WebApplication29.dll
+C:\MyDrive\Petro\WebApplication29\WebApplication29\obj\Debug\WebApplication29.pdb
+C:\MyDrive\Petro\WebApplication29\WebApplication29\obj\Debug\WebApplication29.csprojResolveAssemblyReference.cache
