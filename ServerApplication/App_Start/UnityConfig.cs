@@ -2,7 +2,7 @@ using System;
 
 using Unity;
 
-namespace WebApplication29
+namespace ServerApplication
 {
     /// <summary>
     /// Specifies the Unity configuration for the main container.

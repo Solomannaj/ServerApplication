@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ServerAPI.BussinessLogic
+namespace ServerApplication.BussinessLogic
 {
 
     public interface ICSVParser
@@ -15,12 +16,12 @@ namespace ServerAPI.BussinessLogic
 
     public class CSVParser : ICSVParser
     {
-        private string[] csvRows;
+       // private string[] csvRows;
 
         public IEnumerable<string> ReadCSVLines(string curves)
         {
 
-            string[] headerColumns = csvRows[0].Split(',');
+            string[] headerColumns = CurvesData.LSTCurvesData[0].Split(',');
             string[] curvesList = curves.Split(',');
             string[] csvColumns;
             string[] result;
@@ -28,7 +29,7 @@ namespace ServerAPI.BussinessLogic
             int[] requiredColumnIndexes = headerColumns.Where(x => curvesList.Contains(x)|| x=="index")
                                                        .Select(x => headerColumns.ToList().IndexOf(x)).ToArray();
 
-            foreach (string line in csvRows)
+            foreach (string line in CurvesData.LSTCurvesData)
             {
                 csvColumns = line.Split(',');
                 if(csvColumns[0]!="index")
@@ -43,14 +44,26 @@ namespace ServerAPI.BussinessLogic
 
         public string GetCurveHeaders()
         {
-            csvRows = null;
-            csvRows = System.IO.File.ReadAllLines(@"C:\MyDrive\Petro\PPP.csv");
-            if(csvRows.Count() > 0 && csvRows[0] !=string.Empty)
+            try
             {
-                string result = csvRows[0].Replace("index,", string.Empty);
-                return result.TrimEnd().TrimStart();
+                CurvesData.LSTCurvesData.Clear();
+                string[] csvRows;
+                csvRows = System.IO.File.ReadAllLines(ConfigurationManager.AppSettings["CSVPath"]);
+                if (csvRows.Count() > 0 && csvRows[0] != string.Empty)
+                {
+                    CurvesData.LSTCurvesData = csvRows.ToList();
+                    string result = csvRows[0].Replace("index,", string.Empty);
+                    return result.TrimEnd().TrimStart();
+                }
+                else
+                {
+                    throw new Exception("Invalid CSV file");
+                }
             }
-            return string.Empty;
+            catch (Exception ex)
+            {
+                throw new Exception(string.Format("Unable to read CSV file - {0}", ex.Message));
+            }
         }
     }
 }

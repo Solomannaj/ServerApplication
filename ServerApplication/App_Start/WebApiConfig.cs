@@ -1,4 +1,4 @@
-﻿using ServerAPI.BussinessLogic;
+﻿using ServerApplication.BussinessLogic;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,7 @@ using Unity;
 using Unity.AspNet.WebApi;
 using Unity.Lifetime;
 
-namespace WebApplication29
+namespace ServerApplication
 {
     public static class WebApiConfig
     {
@@ -21,13 +21,14 @@ namespace WebApplication29
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{action}/{id}",
-                defaults: new { id = RouteParameter.Optional }
+                defaults: new {id = RouteParameter.Optional }
             );
             
 
             var container = new UnityContainer();
             container.RegisterType<IDataPublisher, DataPublisher>(new HierarchicalLifetimeManager());
             container.RegisterType<ICSVParser, CSVParser>(new HierarchicalLifetimeManager());
+            container.RegisterType<IXMLGenerator, XMLGenerator>(new HierarchicalLifetimeManager());
             config.DependencyResolver = new UnityDependencyResolver(container);
         }
     }

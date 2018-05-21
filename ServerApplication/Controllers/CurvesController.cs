@@ -1,32 +1,30 @@
-﻿using ServerAPI.BussinessLogic;
-using System;
+﻿using ServerApplication.BussinessLogic;
 using System.Collections.Generic;
-using System.Linq;
+using System.Configuration;
 using System.Net;
 using System.Net.Http;
-using System.Threading.Tasks;
+using System.Net.Http.Headers;
 using System.Web.Http;
 
-namespace WebApplication29.Controllers
+namespace ServerApplication.Controllers
 {
     public class CurvesController : ApiController
     {
        public  IDataPublisher dataPublisher;
        private ICSVParser csvParser;
+       private IXMLGenerator xmlGenerator;
 
-        public   CurvesController(IDataPublisher objPublisher, ICSVParser objCSVParser)
+        public   CurvesController(IDataPublisher objPublisher, ICSVParser objCSVParser, IXMLGenerator objXMLGenerator)
         {
             dataPublisher = objPublisher;
             csvParser = objCSVParser;
+            xmlGenerator = objXMLGenerator;
         }
 
-        // GET api/values
         [HttpGet]
         public void InvokeTransfer(string curves)
         {
             dataPublisher.PublishData(curves);
-            //Action actPublish = () => { dataPublisher.PublishData(curves); };
-            //Task.Run(actPublish);
         }
 
         [HttpGet]
@@ -39,6 +37,23 @@ namespace WebApplication29.Controllers
         public string GetCurveHeaders()
         {
             return csvParser.GetCurveHeaders();
+        }
+
+        [HttpGet]
+        public HttpResponseMessage ExportData(string curveNames, List<long> minIndexes, List<long> maxIndexes)
+        {
+            var dataStream = xmlGenerator.GetMemStream(curveNames, minIndexes, maxIndexes);
+            var result = new HttpResponseMessage(HttpStatusCode.OK)
+            {
+                Content = new ByteArrayContent(dataStream.GetBuffer())
+            };
+            result.Content.Headers.ContentDisposition = new System.Net.Http.Headers.ContentDispositionHeaderValue("xmlfile")
+            {
+                FileName = string.Format(ConfigurationManager.AppSettings["XMLFileName"])
+            };
+            result.Content.Headers.ContentType = new MediaTypeHeaderValue("application/octet-stream");
+
+            return result;
         }
     }
 }

@@ -70,9 +70,9 @@ C:\MyDrive\Petro\ServerApplication\ServerApplication\bin\roslyn\vbc.exe.config
 C:\MyDrive\Petro\ServerApplication\ServerApplication\bin\roslyn\vbc.rsp
 C:\MyDrive\Petro\ServerApplication\ServerApplication\bin\roslyn\VBCSCompiler.exe
 C:\MyDrive\Petro\ServerApplication\ServerApplication\bin\roslyn\VBCSCompiler.exe.config
-C:\MyDrive\Petro\ServerApplication\ServerApplication\bin\WebApplication29.dll.config
-C:\MyDrive\Petro\ServerApplication\ServerApplication\bin\WebApplication29.dll
-C:\MyDrive\Petro\ServerApplication\ServerApplication\bin\WebApplication29.pdb
+C:\MyDrive\Petro\ServerApplication\ServerApplication\bin\ServerApplication.dll.config
+C:\MyDrive\Petro\ServerApplication\ServerApplication\bin\ServerApplication.dll
+C:\MyDrive\Petro\ServerApplication\ServerApplication\bin\ServerApplication.pdb
 C:\MyDrive\Petro\ServerApplication\ServerApplication\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\MyDrive\Petro\ServerApplication\ServerApplication\bin\Microsoft.Diagnostics.Tracing.EventSource.dll
 C:\MyDrive\Petro\ServerApplication\ServerApplication\bin\Microsoft.Web.Infrastructure.dll
@@ -92,6 +92,5 @@ C:\MyDrive\Petro\ServerApplication\ServerApplication\bin\Newtonsoft.Json.xml
 C:\MyDrive\Petro\ServerApplication\ServerApplication\bin\System.Net.Http.Formatting.xml
 C:\MyDrive\Petro\ServerApplication\ServerApplication\bin\System.Web.Http.xml
 C:\MyDrive\Petro\ServerApplication\ServerApplication\bin\System.Web.Http.WebHost.xml
-C:\MyDrive\Petro\ServerApplication\ServerApplication\obj\Debug\ServerApplication.csprojResolveAssemblyReference.cache
-C:\MyDrive\Petro\ServerApplication\ServerApplication\obj\Debug\WebApplication29.dll
-C:\MyDrive\Petro\ServerApplication\ServerApplication\obj\Debug\WebApplication29.pdb
+C:\MyDrive\Petro\ServerApplication\ServerApplication\obj\Debug\ServerApplication.dll
+C:\MyDrive\Petro\ServerApplication\ServerApplication\obj\Debug\ServerApplication.pdb

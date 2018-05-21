@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading;
 using System.Configuration;
 
-namespace ServerAPI.BussinessLogic
+namespace ServerApplication.BussinessLogic
 {
     public interface IDataPublisher
     {
@@ -62,29 +62,44 @@ namespace ServerAPI.BussinessLogic
 
         public void PublishData(string curves)
         {
-            TrabsferInvoked = true;
-
-            IEnumerable<string> csvTable = csvParser.ReadCSVLines(curves);
-            foreach (string item in csvTable)
+            try
             {
-                if (!TrabsferInvoked)
-                    break;
-                PublishRowData(item);
-                Thread.Sleep(1000);
-            }
+                TrabsferInvoked = true;
 
-            csvTable = null;
+                IEnumerable<string> csvTable = csvParser.ReadCSVLines(curves);
+
+                //To avoid differed execution of enumerable
+                List<string> dataToPublish = csvTable.ToList();
+
+                foreach (string item in dataToPublish)
+                {
+                    if (!TrabsferInvoked)
+                        break;
+                    PublishRowData(item);
+                    Thread.Sleep(Convert.ToInt32(ConfigurationManager.AppSettings["DataTranferRate"]));
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(string.Format("Error in publishing data - {0}", ex.Message));
+            }
         }
 
         private void PublishRowData(string message)
         {
-           
-            channel.QueueDeclare(queue: "hello", durable: false, exclusive: false, autoDelete: false, arguments: null);
-                
-            var body = Encoding.UTF8.GetBytes(message);
+            try
+            {
+                channel.QueueDeclare(queue: "hello", durable: false, exclusive: false, autoDelete: false, arguments: null);
 
-            channel.BasicPublish(exchange: "", routingKey: "hello", basicProperties: null, body: body);
+                var body = Encoding.UTF8.GetBytes(message);
+
+                channel.BasicPublish(exchange: "", routingKey: "hello", basicProperties: null, body: body);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(string.Format("Exception occured with RabbitMQ channel - {0}", ex.Message));
+            }
         }
-
     }
 }
