@@ -94,3 +94,4 @@ C:\MyDrive\Petro\ServerApplication\ServerApplication\bin\System.Web.Http.xml
 C:\MyDrive\Petro\ServerApplication\ServerApplication\bin\System.Web.Http.WebHost.xml
 C:\MyDrive\Petro\ServerApplication\ServerApplication\obj\Debug\ServerApplication.dll
 C:\MyDrive\Petro\ServerApplication\ServerApplication\obj\Debug\ServerApplication.pdb
+C:\MyDrive\Petro\ServerApplication\ServerApplication\obj\Debug\ServerApplication.csprojResolveAssemblyReference.cache

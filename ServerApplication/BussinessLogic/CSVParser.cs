@@ -1,8 +1,8 @@
-﻿using System;
+﻿using ServerApplication.BusinessLogic;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace ServerApplication.BussinessLogic
 {
@@ -21,18 +21,18 @@ namespace ServerApplication.BussinessLogic
         public IEnumerable<string> ReadCSVLines(string curves)
         {
 
-            string[] headerColumns = CurvesData.LSTCurvesData[0].Split(',');
+            string[] headerColumns = CurvesData.ArrCurvesHeaders;
             string[] curvesList = curves.Split(',');
             string[] csvColumns;
             string[] result;
 
-            int[] requiredColumnIndexes = headerColumns.Where(x => curvesList.Contains(x)|| x=="index")
+            int[] requiredColumnIndexes = headerColumns.Where(x => curvesList.Contains(x)|| x== ConfigurationManager.AppSettings["IndexColumn"].TrimEnd().TrimStart())
                                                        .Select(x => headerColumns.ToList().IndexOf(x)).ToArray();
 
             foreach (string line in CurvesData.LSTCurvesData)
             {
                 csvColumns = line.Split(',');
-                if(csvColumns[0]!="index")
+                if(csvColumns[0]!= ConfigurationManager.AppSettings["IndexColumn"].TrimEnd().TrimStart())
                 {
                     result = csvColumns.Where(x => requiredColumnIndexes.Contains(csvColumns.ToList().IndexOf(x))).ToArray();
 
@@ -43,16 +43,20 @@ namespace ServerApplication.BussinessLogic
         }
 
         public string GetCurveHeaders()
-        {
+        { 
             try
             {
                 CurvesData.LSTCurvesData.Clear();
+                CurvesData.ArrCurvesHeaders = null;
+
                 string[] csvRows;
                 csvRows = System.IO.File.ReadAllLines(ConfigurationManager.AppSettings["CSVPath"]);
                 if (csvRows.Count() > 0 && csvRows[0] != string.Empty)
                 {
                     CurvesData.LSTCurvesData = csvRows.ToList();
-                    string result = csvRows[0].Replace("index,", string.Empty);
+                    string result = csvRows[0].Replace(ConfigurationManager.AppSettings["IndexColumn"].TrimEnd().TrimStart() + ",", string.Empty);
+                    CurvesData.ArrCurvesHeaders = csvRows[0].Split(',');
+                    CurvesData.LSTCurvesData.RemoveAt(0);
                     return result.TrimEnd().TrimStart();
                 }
                 else
@@ -62,6 +66,7 @@ namespace ServerApplication.BussinessLogic
             }
             catch (Exception ex)
             {
+                Logger.WrieException(string.Format("Unable to read CSV file - {0}", ex.Message));
                 throw new Exception(string.Format("Unable to read CSV file - {0}", ex.Message));
             }
         }

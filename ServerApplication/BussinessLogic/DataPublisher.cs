@@ -1,11 +1,11 @@
-﻿using System;
+﻿using RabbitMQ.Client;
+using ServerApplication.BusinessLogic;
+using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
-using System.Threading.Tasks;
-using RabbitMQ.Client;
 using System.Text;
 using System.Threading;
-using System.Configuration;
 
 namespace ServerApplication.BussinessLogic
 {
@@ -26,34 +26,29 @@ namespace ServerApplication.BussinessLogic
 
         public DataPublisher(ICSVParser objParser)
         {
-            csvParser = objParser;
-            factory = new ConnectionFactory()
-            {
-                HostName = ConfigurationManager.AppSettings["RabbitMQServer"],
-                UserName = ConfigurationManager.AppSettings["RabbitMQUser"],
-                Password = ConfigurationManager.AppSettings["RabbitMQPassword"],
-                VirtualHost = ConfigurationManager.AppSettings["RabbitMQVirtualHost"],
-                Port = Convert.ToInt32(ConfigurationManager.AppSettings["RabbitMQPort"])
-            };
-
-            connection = factory.CreateConnection();
-            channel = connection.CreateModel();
-        }
-
-        public void Dispose()
-        {
             try
             {
-              channel.Dispose();
-            }
-            catch { }
+                csvParser = objParser;
+                factory = new ConnectionFactory()
+                {
+                    HostName = ConfigurationManager.AppSettings["RabbitMQServer"],
+                    UserName = ConfigurationManager.AppSettings["RabbitMQUser"],
+                    Password = ConfigurationManager.AppSettings["RabbitMQPassword"],
+                    VirtualHost = ConfigurationManager.AppSettings["RabbitMQVirtualHost"],
+                    Port = Convert.ToInt32(ConfigurationManager.AppSettings["RabbitMQPort"])
+                };
 
-            try
-            {
-                connection.Dispose();
+                connection = factory.CreateConnection();
+                channel = connection.CreateModel();
             }
-            catch { }
+            catch (Exception ex)
+            {
+                Logger.WrieException(string.Format("Failed to connect RabbitMQ channel - {0}", ex.Message));
+                throw new Exception(string.Format("Failed to connect RabbitMQ channel - {0}", ex.Message));
+            }
+           
         }
+       
 
         public void StopPublish()
         {
@@ -81,7 +76,7 @@ namespace ServerApplication.BussinessLogic
             }
             catch (Exception ex)
             {
-
+                Logger.WrieException(string.Format("Error in publishing data - {0}", ex.Message));
                 throw new Exception(string.Format("Error in publishing data - {0}", ex.Message));
             }
         }
@@ -90,14 +85,15 @@ namespace ServerApplication.BussinessLogic
         {
             try
             {
-                channel.QueueDeclare(queue: "hello", durable: false, exclusive: false, autoDelete: false, arguments: null);
+                channel.QueueDeclare(queue: ConfigurationManager.AppSettings["QueueName"], durable: false, exclusive: false, autoDelete: false, arguments: null);
 
                 var body = Encoding.UTF8.GetBytes(message);
 
-                channel.BasicPublish(exchange: "", routingKey: "hello", basicProperties: null, body: body);
+                channel.BasicPublish(exchange: "", routingKey: ConfigurationManager.AppSettings["QueueName"], basicProperties: null, body: body);
             }
             catch (Exception ex)
             {
+                Logger.WrieException(string.Format("Exception occured with RabbitMQ channel - {0}", ex.Message));
                 throw new Exception(string.Format("Exception occured with RabbitMQ channel - {0}", ex.Message));
             }
         }

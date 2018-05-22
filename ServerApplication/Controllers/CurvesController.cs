@@ -1,4 +1,6 @@
-﻿using ServerApplication.BussinessLogic;
+﻿
+using ServerApplication.BussinessLogic;
+using ServerApplication.Models;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Net;
@@ -39,10 +41,10 @@ namespace ServerApplication.Controllers
             return csvParser.GetCurveHeaders();
         }
 
-        [HttpGet]
-        public HttpResponseMessage ExportData(string curveNames, List<long> minIndexes, List<long> maxIndexes)
+        [HttpPost]
+        public HttpResponseMessage ExportData(List<CurveInfo> curveInfo)
         {
-            var dataStream = xmlGenerator.GetMemStream(curveNames, minIndexes, maxIndexes);
+            var dataStream = xmlGenerator.GetMemStream(curveInfo);
             var result = new HttpResponseMessage(HttpStatusCode.OK)
             {
                 Content = new ByteArrayContent(dataStream.GetBuffer())

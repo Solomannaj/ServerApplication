@@ -12,5 +12,7 @@ namespace ServerApplication.BussinessLogic
             LSTCurvesData = new List<string>();
         }
         public static List<string> LSTCurvesData { get; set; }
+
+        public static string[] ArrCurvesHeaders { get; set; }
     }
 }

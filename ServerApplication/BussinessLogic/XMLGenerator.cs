@@ -1,20 +1,20 @@
-﻿using System;
+﻿using ServerApplication.BusinessLogic;
+using ServerApplication.Models;
+using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Web;
 using System.Xml;
 
 namespace ServerApplication.BussinessLogic
 {
     public interface IXMLGenerator
     {
-        MemoryStream GetMemStream(string curveNames, List<long> minIndexes, List<long> maxIndexes);
+        MemoryStream GetMemStream(List<CurveInfo> curveInfo);
     }
 
     public class XMLGenerator : IXMLGenerator
     {
-        public  MemoryStream GetMemStream(string curveNames, List<long> minIndexes, List<long> maxIndexes)
+        public  MemoryStream GetMemStream(List<CurveInfo> lstCurveInfo)
         {
             try
             {
@@ -28,11 +28,14 @@ namespace ServerApplication.BussinessLogic
                 int i = 0;
 
                 //GenerateCurves
-                foreach (var item in curveNames.Split(','))
+                string curveNames=string.Empty;
+                foreach (CurveInfo item in lstCurveInfo)
                 {
-                    CreateCurves(item, minIndexes[i], maxIndexes[i], writer);
+                    curveNames = curveNames + item.Name + ",";
+                    CreateCurves(item, writer);
                     i++;
                 }
+                curveNames = curveNames.TrimEnd(',');
 
                 //Generate Values
                 writer.WriteStartElement("logData");
@@ -53,6 +56,7 @@ namespace ServerApplication.BussinessLogic
             }
             catch (Exception ex)
             {
+                Logger.WrieException(string.Format("Failed to generate xml file - {0}", ex.Message));
                 throw new Exception(string.Format("Failed to generate xml file - {0}", ex.Message));
             }
           
@@ -66,21 +70,21 @@ namespace ServerApplication.BussinessLogic
             }
             catch (Exception ex)
             {
-
+                Logger.WrieException(string.Format("Error in writing values to xml - {0}", ex.Message));
                 throw new Exception(string.Format("Error in writing values to xml - {0}", ex.Message));
             }
             
         }
 
-        private void CreateCurves(string curveName, long minIndex, long maxIndex, XmlTextWriter writer)
+        private void CreateCurves(CurveInfo curveInfo, XmlTextWriter writer)
         {
             try
             {
                 writer.WriteStartElement("logCurveInfo");
-                writer.WriteAttributeString("id", curveName);
+                writer.WriteAttributeString("id", curveInfo.Name);
 
-                writer.WriteElementString("minIndex", minIndex.ToString());
-                writer.WriteElementString("maxIndex", maxIndex.ToString());
+                writer.WriteElementString("minIndex", curveInfo.MinIndex.ToString());
+                writer.WriteElementString("maxIndex", curveInfo.MaxIndex.ToString());
 
                 writer.WriteElementString("typeLogData", "double");
 
@@ -88,7 +92,7 @@ namespace ServerApplication.BussinessLogic
             }
             catch (Exception ex)
             {
-
+                Logger.WrieException(string.Format("Error in writing curves to xml - {0}", ex.Message));
                 throw new Exception(string.Format("Error in writing curves to xml - {0}", ex.Message));
             }
          
