@@ -38,6 +38,7 @@ namespace ServerApplication.Controllers
         [HttpGet]
         public string GetCurveHeaders()
         {
+            csvParser.PopulateCurvesData();
             return csvParser.GetCurveHeaders();
         }
 

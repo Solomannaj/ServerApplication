@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Xml;
+using System.Linq;
 
 namespace ServerApplication.BussinessLogic
 {
@@ -14,6 +15,12 @@ namespace ServerApplication.BussinessLogic
 
     public class XMLGenerator : IXMLGenerator
     {
+        ICSVParser csvParser;
+        public XMLGenerator(ICSVParser objCSVParser)
+        {
+            csvParser = objCSVParser;
+        }
+
         public  MemoryStream GetMemStream(List<CurveInfo> lstCurveInfo)
         {
             try
@@ -42,7 +49,9 @@ namespace ServerApplication.BussinessLogic
                 writer.WriteStartElement("header");
                 writer.WriteString("index," + curveNames);
                 writer.WriteEndElement();
-                foreach (var value in CurvesData.LSTCurvesData)
+
+                List<string> lstData = csvParser.GetDataRows(lstCurveInfo);
+                foreach (var value in lstData)
                 {
                     CreateValues(value, writer);
 

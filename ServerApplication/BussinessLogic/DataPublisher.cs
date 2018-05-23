@@ -61,7 +61,7 @@ namespace ServerApplication.BussinessLogic
             {
                 TrabsferInvoked = true;
 
-                IEnumerable<string> csvTable = csvParser.ReadCSVLines(curves);
+                IEnumerable<string> csvTable = csvParser.GetDataRows(curves);
 
                 //To avoid differed execution of enumerable
                 List<string> dataToPublish = csvTable.ToList();

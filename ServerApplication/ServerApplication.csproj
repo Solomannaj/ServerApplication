@@ -119,6 +119,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Curve.cs" />
+    <Compile Include="Models\CurveHeader.cs" />
     <Compile Include="Models\CurveInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

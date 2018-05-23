@@ -3,3 +3,103 @@ Log Entry : 12:49:05 PM Tuesday, May 22, 2018
   :
   :Hai ex
 -------------------------------
+
+Log Entry : 2:18:02 PM Tuesday, May 22, 2018
+  :
+  :Error in getting data for exporting - Input string was not in a correct format.
+-------------------------------
+
+Log Entry : 2:18:02 PM Tuesday, May 22, 2018
+  :
+  :Failed to generate xml file - Error in getting data for exporting - Input string was not in a correct format.
+-------------------------------
+
+Log Entry : 2:20:57 PM Tuesday, May 22, 2018
+  :
+  :Error in getting data for exporting - Input string was not in a correct format.
+-------------------------------
+
+Log Entry : 2:20:57 PM Tuesday, May 22, 2018
+  :
+  :Failed to generate xml file - Error in getting data for exporting - Input string was not in a correct format.
+-------------------------------
+
+Log Entry : 2:25:19 PM Tuesday, May 22, 2018
+  :
+  :Error in getting data for exporting - Input string was not in a correct format.
+-------------------------------
+
+Log Entry : 2:25:19 PM Tuesday, May 22, 2018
+  :
+  :Failed to generate xml file - Error in getting data for exporting - Input string was not in a correct format.
+-------------------------------
+
+Log Entry : 2:28:06 PM Tuesday, May 22, 2018
+  :
+  :Error in getting data for exporting - Input string was not in a correct format.
+-------------------------------
+
+Log Entry : 2:28:06 PM Tuesday, May 22, 2018
+  :
+  :Failed to generate xml file - Error in getting data for exporting - Input string was not in a correct format.
+-------------------------------
+
+Log Entry : 7:52:29 AM Wednesday, May 23, 2018
+  :
+  :Unable to read CSV file - Input string was not in a correct format.
+-------------------------------
+
+Log Entry : 7:55:00 AM Wednesday, May 23, 2018
+  :
+  :Unable to read CSV file - Input string was not in a correct format.
+-------------------------------
+
+Log Entry : 7:57:14 AM Wednesday, May 23, 2018
+  :
+  :Unable to read CSV file - Input string was not in a correct format.
+-------------------------------
+
+Log Entry : 8:39:25 AM Wednesday, May 23, 2018
+  :
+  :Failed to generate xml file - Input string was not in a correct format.
+-------------------------------
+
+Log Entry : 8:49:57 AM Wednesday, May 23, 2018
+  :
+  :Failed to generate xml file - Input string was not in a correct format.
+-------------------------------
+
+Log Entry : 9:04:28 AM Wednesday, May 23, 2018
+  :
+  :Failed to generate xml file - Input string was not in a correct format.
+-------------------------------
+
+Log Entry : 9:12:25 AM Wednesday, May 23, 2018
+  :
+  :Unable to read CSV file - Input string was not in a correct format.
+-------------------------------
+
+Log Entry : 9:12:59 AM Wednesday, May 23, 2018
+  :
+  :Unable to read CSV file - Input string was not in a correct format.
+-------------------------------
+
+Log Entry : 9:13:14 AM Wednesday, May 23, 2018
+  :
+  :Unable to read CSV file - Input string was not in a correct format.
+-------------------------------
+
+Log Entry : 9:14:16 AM Wednesday, May 23, 2018
+  :
+  :Unable to read CSV file - Input string was not in a correct format.
+-------------------------------
+
+Log Entry : 9:18:30 AM Wednesday, May 23, 2018
+  :
+  :Error in publishing data - Sequence contains no elements
+-------------------------------
+
+Log Entry : 9:18:45 AM Wednesday, May 23, 2018
+  :
+  :Error in publishing data - Sequence contains no elements
+-------------------------------
